@@ -10,17 +10,12 @@ public class CustomErrorController implements ErrorController {
 
     @GetMapping("/error")
     public ModelAndView handleError() {
-        return new ModelAndView("error"); // View name without slash
+        return new ModelAndView("error"); // returns error.html or error.jsp
     }
 
     @GetMapping("/403")
     public ModelAndView handle403() {
-        return new ModelAndView("403");
+        return new ModelAndView("403"); // returns 403.html or 403.jsp
     }
 }
 
-    @Override
-    public String getErrorPath() {
-        return PATH;
-    }
-}
